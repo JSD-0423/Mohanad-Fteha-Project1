@@ -3,4 +3,50 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Nunito Sans', sans-serif;
+	font-size: 15px;
 }
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+/* Header Section */
+
+header {
+	padding: 20px 0;
+	background-color: var(--bg_default);
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .container h4 {
+	color: var(--brand-primary);
+}
+
+header .container .btn-container {
+	display: flex;
+	gap: 10px;
+}
+
+header .container .btn-container button {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	border: 1px solid var(--lines-color);
+	padding: 5px 10px;
+	border-radius: 8px;
+	color: var(--body-text);
+}
+
+/* Header Section */
