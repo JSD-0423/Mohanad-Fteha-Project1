@@ -55,6 +55,7 @@ topics.forEach(topic => {
 
 	const img = document.createElement('img')
 	img.src = topic.img
+	img.loading = 'lazy'
 
 	const info = document.createElement('div')
 	info.className = 'info'
