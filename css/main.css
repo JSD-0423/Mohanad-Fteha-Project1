@@ -16,6 +16,10 @@ button {
 	cursor: pointer;
 }
 
+.muted-text {
+	color: #6c757d;
+}
+
 /* Header Section */
 
 header {
@@ -109,3 +113,99 @@ header .container .btn-container button {
 	color: var(--body-text);
 }
 /* Logo Bar Section */
+/* Topics Section */
+
+.topics {
+	background-color: var(--bg_body);
+	padding-top: 25px;
+	color: var(--body-text);
+}
+
+.topics .search-bar {
+	background-color: var(--bg_default);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 15px;
+	gap: 5px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	border-radius: 10px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.topics .search-bar .search-input {
+	display: flex;
+	align-items: center;
+	border-right: 1px solid var(--lines-color);
+	width: 80%;
+}
+
+.topics .search-bar input {
+	color: var(--body-text);
+	background-color: var(--bg_default);
+	border: 0;
+	outline: 0;
+	font-size: 16px;
+	padding: 15px;
+	width: 100%;
+}
+
+.topics .filter-sort-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+	font-size: 15px;
+}
+
+.topics .filter-sort-wrapper .sort {
+	border-right: 1px solid var(--lines-color);
+	padding: 5px 15px;
+}
+
+.topics .filter-sort-wrapper select {
+	border: 0;
+	color: var(--body-text);
+	background-color: var(--bg_default);
+	width: 100px;
+}
+
+.topics .container .web-topics .topics-container {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	flex-wrap: wrap;
+	margin-top: 15px;
+}
+
+.topics .container .web-topics .topics-container .topic {
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: var(--bg_default);
+}
+
+.topics .container .web-topics .topics-container .topic .info {
+	padding: 5px 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.topics .container .web-topics .topics-container .topic .info .stars-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #e4961f;
+	font-size: 19px;
+}
+
+.topics .container .web-topics .topics-container img {
+	width: 320px;
+	height: 200px;
+	object-fit: cover;
+	text-align: center;
+}
+
+/* Topics Section */
