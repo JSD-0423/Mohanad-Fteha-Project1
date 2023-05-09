@@ -1,3 +1,5 @@
+import topics from './data/topics.js'
+
 const setTheme = isDark => {
 	const root = document.querySelector(':root')
 
@@ -40,49 +42,43 @@ let themeBtn = document.getElementById('theme-btn')
 let _switchTheme = switchTheme()
 themeBtn.addEventListener('click', _switchTheme)
 
-const getTopics = async path => {
-	const response = await fetch(path)
-	return response.json()
-}
+const topicsSection = document.querySelector('.web-topics')
+const topicsContainer = document.querySelector('.topics-container')
 
-getTopics('../js/data/topics.json').then(topics => {
-	const topicsSection = document.querySelector('.web-topics')
-	const topicsContainer = document.querySelector('.topics-container')
+const header = document.createElement('h1')
+header.textContent = `"${topics.length}" Web Topics Found`
+topicsSection.prepend(header)
 
-	const header = document.createElement('h1')
-	header.textContent = `"${topics.length}" Web Topics Found`
-	topicsSection.prepend(header)
+topics.forEach(topic => {
+	const div = document.createElement('div')
+	div.className = 'topic'
 
-	topics.forEach(topic => {
-		const div = document.createElement('div')
-		div.className = 'topic'
+	const img = document.createElement('img')
+	img.src = topic.img
 
-		const img = document.createElement('img')
-		img.src = topic.img
+	const info = document.createElement('div')
+	info.className = 'info'
 
-		const info = document.createElement('div')
-		info.className = 'info'
+	const head = document.createElement('div')
 
-		const head = document.createElement('div')
+	const title = document.createElement('p')
+	title.textContent = topic.title
 
-		const title = document.createElement('p')
-		title.textContent = topic.title
+	const tool = document.createElement('h4')
+	tool.textContent = topic.tool
 
-		const tool = document.createElement('h4')
-		tool.textContent = topic.tool
+	head.appendChild(title)
+	head.appendChild(tool)
 
-		head.appendChild(title)
-		head.appendChild(tool)
+	info.appendChild(head)
 
-		info.appendChild(head)
+	const footer = document.createElement('div')
+	footer.className = 'footer'
 
-		const footer = document.createElement('div')
-		footer.className = 'footer'
+	const starsCotainer = document.createElement('div')
+	starsCotainer.className = 'stars-container'
 
-		const starsCotainer = document.createElement('div')
-		starsCotainer.className = 'stars-container'
-
-		starsCotainer.innerHTML = `
+	starsCotainer.innerHTML = `
 			<ion-icon name="star"></ion-icon>
 			<ion-icon name="star"></ion-icon>
 			<ion-icon name="star"></ion-icon>
@@ -90,19 +86,18 @@ getTopics('../js/data/topics.json').then(topics => {
 			<ion-icon name="star"></ion-icon>
 		`
 
-		const author = document.createElement('p')
-		author.className = 'text-muted'
+	const author = document.createElement('p')
+	author.className = 'text-muted'
 
-		author.textContent = `Author: ${topic.author}`
+	author.textContent = `Author: ${topic.author}`
 
-		footer.appendChild(starsCotainer)
-		footer.appendChild(author)
+	footer.appendChild(starsCotainer)
+	footer.appendChild(author)
 
-		info.appendChild(footer)
+	info.appendChild(footer)
 
-		div.appendChild(img)
-		div.appendChild(info)
+	div.appendChild(img)
+	div.appendChild(info)
 
-		topicsContainer.appendChild(div)
-	})
+	topicsContainer.appendChild(div)
 })
