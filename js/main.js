@@ -78,13 +78,19 @@ topics.forEach(topic => {
 	const starsCotainer = document.createElement('div')
 	starsCotainer.className = 'stars-container'
 
-	starsCotainer.innerHTML = `
-			<ion-icon name="star"></ion-icon>
-			<ion-icon name="star"></ion-icon>
-			<ion-icon name="star"></ion-icon>
-			<ion-icon name="star"></ion-icon>
-			<ion-icon name="star"></ion-icon>
-		`
+	let noNotFilledStars = 5 - Math.ceil(topic.rating)
+
+	for (var i = topic.rating; i >= 1; i--) {
+		starsCotainer.innerHTML += `<ion-icon name="star"></ion-icon>`
+	}
+
+	if (i > 0) {
+		starsCotainer.innerHTML += `<ion-icon name="star-half"></ion-icon>`
+	}
+
+	for (let i = 0; i < noNotFilledStars; i++) {
+		starsCotainer.innerHTML += `<ion-icon name="star-outline"></ion-icon>`
+	}
 
 	const author = document.createElement('p')
 	author.className = 'text-muted'
