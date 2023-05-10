@@ -17,11 +17,10 @@ const setTheme = isDark => {
 
 const checkLocalStorage = () => {
 	let isDark = localStorage.getItem('isDark')
+		? JSON.parse(localStorage.getItem('isDark'))
+		: false
 
-	if (isDark !== null) {
-		isDark = JSON.parse(isDark)
-		setTheme(isDark)
-	} else setTheme(false)
+	setTheme(isDark)
 }
 
 const switchTheme = function () {
