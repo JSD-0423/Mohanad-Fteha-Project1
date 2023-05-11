@@ -19,12 +19,12 @@
 
 		<!-- JS -->
 		<script defer src="./js/main.js" type="module"></script>
-		<title>Project1</title>
+		<title>Web Topics</title>
 	</head>
 	<body>
 		<header>
 			<div class="container header-container">
-				<h4>Web Topics</h4>
+				<a href="/" class="logo-text">Web topics</a>
 				<div class="btn-container">
 					<button id="theme-btn">
 						<ion-icon name="moon-outline"></ion-icon>
@@ -54,16 +54,16 @@
 						<ion-icon name="search-outline" class="search-icon"></ion-icon>
 						<input type="text" placeholder="Search the website..." />
 					</div>
-					<div class="filter-sort-wrapper">
-						<div class="sort">
-							<p>Sort by:</p>
-							<select>
+					<div class="fields">
+						<div>
+							<label for="sort">Sort by:</label>
+							<select id="sort">
 								<option value="Default">Default</option>
 							</select>
 						</div>
 						<div>
-							<p>Filter by:</p>
-							<select>
+							<label for="filter"> Filter by: </label>
+							<select id="filter">
 								<option value="Default">Default</option>
 							</select>
 						</div>

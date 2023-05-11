@@ -6,7 +6,7 @@
 }
 
 .container {
-	width: 85%;
+	width: 95%;
 	margin: 0 auto;
 }
 
@@ -16,8 +16,13 @@ button {
 	cursor: pointer;
 }
 
-.muted-text {
-	color: #6c757d;
+.text-muted {
+	color: #959594;
+}
+
+a {
+	text-decoration: none;
+	color: unset;
 }
 
 /* Header Section */
@@ -33,13 +38,14 @@ header .header-container {
 	align-items: center;
 }
 
-header .container h4 {
+header .container .logo-text {
 	color: var(--brand-primary);
+	font-size: 18px;
 }
 
 header .container .btn-container {
 	display: flex;
-	gap: 10px;
+	gap: 5px;
 }
 
 header .container .btn-container button {
@@ -48,7 +54,7 @@ header .container .btn-container button {
 	gap: 5px;
 	border: 1px solid var(--lines-color);
 	padding: 5px 10px;
-	border-radius: 8px;
+	border-radius: 5px;
 	color: var(--body-text);
 }
 
@@ -99,8 +105,9 @@ header .container .btn-container button {
 .hero-section {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding-bottom: 25px;
+	margin: 0 auto;
+	width: fit-content;
 }
 
 .hero-section h2 {
@@ -124,77 +131,93 @@ header .container .btn-container button {
 .topics .search-bar {
 	background-color: var(--bg_default);
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	padding: 0 15px;
-	gap: 5px;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+	gap: 8px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0 0rem 1rem;
 	border-radius: 10px;
 	width: 100%;
 	margin-bottom: 20px;
+	height: 50px;
+}
+
+.topics .search-bar .search-icon {
+	padding-left: 15px;
 }
 
 .topics .search-bar .search-input {
 	display: flex;
 	align-items: center;
 	border-right: 1px solid var(--lines-color);
-	width: 80%;
+	width: 70%;
+	height: 100%;
 }
 
 .topics .search-bar input {
 	color: var(--body-text);
 	background-color: var(--bg_default);
 	border: 0;
-	outline: 0;
 	font-size: 16px;
-	padding: 15px;
+	padding: 0 7px;
 	width: 100%;
+	height: 100%;
 }
 
-.topics .filter-sort-wrapper {
+.topics .fields {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	gap: 15px;
+	gap: 8px;
 	font-size: 15px;
+	height: 100%;
+	width: 30%;
 }
 
-.topics .filter-sort-wrapper .sort {
+.topics .fields > div {
 	border-right: 1px solid var(--lines-color);
-	padding: 5px 15px;
+	padding-right: 5px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
 }
 
-.topics .filter-sort-wrapper select {
+.topics .fields > div:last-of-type {
+	border-right: 0px !important;
+}
+
+.topics .fields select {
 	border: 0;
 	color: var(--body-text);
 	background-color: var(--bg_default);
-	width: 100px;
+	width: 100%;
 }
 
 .topics .container .web-topics .topics-container {
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: 20px;
+	justify-content: flex-start;
+	gap: 10px;
 	flex-wrap: wrap;
 	margin-top: 15px;
 }
 
-.topics .container .web-topics .topics-container .topic {
+.topic {
 	border-radius: 10px;
 	overflow: hidden;
 	background-color: var(--bg_default);
+	width: 19.4%;
+	height: 300px;
 }
 
-.topics .container .web-topics .topics-container .topic .info {
-	padding: 5px 10px;
+.topic .info {
+	height: 50%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 20px;
+	padding: 5px 15px;
 }
 
-.topics .container .web-topics .topics-container .topic .info .stars-container {
+.topic .info .stars-container {
 	display: flex;
 	align-items: center;
 	margin-bottom: 10px;
@@ -202,9 +225,9 @@ header .container .btn-container button {
 	font-size: 19px;
 }
 
-.topics .container .web-topics .topics-container img {
-	width: 320px;
-	height: 200px;
+.topics-container img {
+	width: 100%;
+	height: 45%;
 	object-fit: cover;
 	text-align: center;
 }

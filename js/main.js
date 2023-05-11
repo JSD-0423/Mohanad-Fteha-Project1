@@ -49,8 +49,9 @@ header.textContent = `"${topics.length}" Web Topics Found`
 topicsSection.prepend(header)
 
 topics.forEach(topic => {
-	const div = document.createElement('div')
-	div.className = 'topic'
+	const anchor = document.createElement('a')
+	anchor.href = '/'
+	anchor.className = 'topic'
 
 	const img = document.createElement('img')
 	img.src = topic.img
@@ -62,10 +63,12 @@ topics.forEach(topic => {
 	const head = document.createElement('div')
 
 	const title = document.createElement('p')
-	title.textContent = topic.title
+	title.textContent =
+		topic.title.length > 30 ? topic.title.slice(0, 30) + '...' : topic.title
 
 	const tool = document.createElement('h4')
-	tool.textContent = topic.tool
+	tool.textContent =
+		topic.tool.length > 30 ? topic.tool.slice(0, 25) + '...' : topic.tool
 
 	head.appendChild(title)
 	head.appendChild(tool)
@@ -73,7 +76,7 @@ topics.forEach(topic => {
 	info.appendChild(head)
 
 	const footer = document.createElement('div')
-	footer.className = 'footer'
+	footer.className = 'topics-footer'
 
 	const starsCotainer = document.createElement('div')
 	starsCotainer.className = 'stars-container'
@@ -102,8 +105,8 @@ topics.forEach(topic => {
 
 	info.appendChild(footer)
 
-	div.appendChild(img)
-	div.appendChild(info)
+	anchor.appendChild(img)
+	anchor.appendChild(info)
 
-	topicsContainer.appendChild(div)
+	topicsContainer.appendChild(anchor)
 })
