@@ -4,70 +4,85 @@ const topicsSection = document.querySelector('.web-topics')
 const topicsContainer = document.querySelector('.topics-container')
 
 const header = document.createElement('h1')
-header.textContent = `"${topics.length}" Web Topics Found`
 topicsSection.prepend(header)
 
-topics.forEach(topic => {
-	const anchor = document.createElement('a')
-	anchor.href = '/'
-	anchor.className = 'topic'
+const displayTopics = topics => {
+	topicsContainer.innerHTML = ''
 
-	const img = document.createElement('img')
-	img.src = `./images/${topic.imgFile}`
-	img.loading = 'lazy'
+	header.textContent = `"${topics.length}" Web Topics Found`
 
-	const info = document.createElement('div')
-	info.className = 'info'
+	topics.forEach(topic => {
+		const anchor = document.createElement('a')
+		anchor.href = '/'
+		anchor.className = 'topic'
 
-	const head = document.createElement('div')
+		const img = document.createElement('img')
+		img.src = `./images/${topic.imgFile}`
+		img.loading = 'lazy'
 
-	const title = document.createElement('p')
-	title.textContent =
-		topic.title.length > 30 ? topic.title.slice(0, 30) + '...' : topic.title
+		const info = document.createElement('div')
+		info.className = 'info'
 
-	const tool = document.createElement('h4')
-	tool.textContent =
-		topic.tool.length > 30 ? topic.tool.slice(0, 25) + '...' : topic.tool
+		const head = document.createElement('div')
 
-	head.appendChild(title)
-	head.appendChild(tool)
+		const title = document.createElement('p')
+		title.textContent =
+			topic.title.length > 30 ? topic.title.slice(0, 30) + '...' : topic.title
 
-	info.appendChild(head)
+		const tool = document.createElement('h4')
+		tool.textContent =
+			topic.tool.length > 30 ? topic.tool.slice(0, 25) + '...' : topic.tool
 
-	const footer = document.createElement('div')
-	footer.className = 'topics-footer'
+		head.appendChild(title)
+		head.appendChild(tool)
 
-	const starsCotainer = document.createElement('div')
-	starsCotainer.className = 'stars-container'
+		info.appendChild(head)
 
-	let noNotFilledStars = 5 - Math.ceil(topic.rating)
+		const footer = document.createElement('div')
+		footer.className = 'topics-footer'
 
-	for (var i = topic.rating; i >= 1; i--) {
-		starsCotainer.innerHTML += `<ion-icon name="star"></ion-icon>`
-	}
+		const starsCotainer = document.createElement('div')
+		starsCotainer.className = 'stars-container'
 
-	if (i > 0) {
-		starsCotainer.innerHTML += `<ion-icon name="star-half"></ion-icon>`
-	}
+		let noNotFilledStars = 5 - Math.ceil(topic.rating)
 
-	for (let i = 0; i < noNotFilledStars; i++) {
-		starsCotainer.innerHTML += `<ion-icon name="star-outline"></ion-icon>`
-	}
+		for (var i = topic.rating; i >= 1; i--) {
+			starsCotainer.innerHTML += `<ion-icon name="star"></ion-icon>`
+		}
 
-	const author = document.createElement('p')
-	author.className = 'text-muted'
+		if (i > 0) {
+			starsCotainer.innerHTML += `<ion-icon name="star-half"></ion-icon>`
+		}
 
-	author.textContent = `Author: ${topic.author}`
+		for (let i = 0; i < noNotFilledStars; i++) {
+			starsCotainer.innerHTML += `<ion-icon name="star-outline"></ion-icon>`
+		}
 
-	footer.appendChild(starsCotainer)
-	footer.appendChild(author)
+		const author = document.createElement('p')
+		author.className = 'text-muted'
 
-	info.appendChild(footer)
+		author.textContent = `Author: ${topic.author}`
 
-	anchor.appendChild(img)
-	anchor.appendChild(info)
+		footer.appendChild(starsCotainer)
+		footer.appendChild(author)
 
-	anchor.href = `pages/details.html?id=${topic.id}`
+		info.appendChild(footer)
 
-	topicsContainer.appendChild(anchor)
+		anchor.appendChild(img)
+		anchor.appendChild(info)
+
+		anchor.href = `pages/details.html?id=${topic.id}`
+
+		topicsContainer.appendChild(anchor)
+	})
+}
+
+const searchInput = document.querySelector('input[type=text]')
+
+searchInput.addEventListener('input', e => {
+	const data = topics.filter(topic =>
+		topic.tool.toLowerCase().includes(e.target.value.trim().toLowerCase())
+	)
+
+	displayTopics(data)
 })

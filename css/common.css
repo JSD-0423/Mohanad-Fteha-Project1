@@ -1,3 +1,6 @@
+body {
+	background-color: var(--bg_body);
+}
 * {
 	margin: 0;
 	padding: 0;
