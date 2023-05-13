@@ -1,125 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Nunito Sans', sans-serif;
-}
-
-.container {
-	width: 95%;
-	margin: 0 auto;
-}
-
-button {
-	border: none;
-	background-color: transparent;
-	cursor: pointer;
-}
-
-.text-muted {
-	color: #959594;
-}
-
-a {
-	text-decoration: none;
-	color: unset;
-}
-
-/* Header Section */
-
-header {
-	padding: 20px 0;
-	background-color: var(--bg_default);
-}
-
-header .header-container {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-header .container .logo-text {
-	color: var(--brand-primary);
-	font-size: 18px;
-}
-
-header .container .btn-container {
-	display: flex;
-	gap: 5px;
-}
-
-header .container .btn-container button {
-	display: flex;
-	align-items: center;
-	gap: 5px;
-	border: 1px solid var(--lines-color);
-	padding: 5px 10px;
-	border-radius: 5px;
-	color: var(--body-text);
-}
-
-/* Header Section */
-/* Logo Bar Section */
-
-.welcome-sec {
-	background-color: var(--bg_default);
-}
-
-.logo-bar {
-	width: 100%;
-	position: relative;
-	height: 50px;
-}
-
-.logo-bar .left {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 50px;
-	background: linear-gradient(
-		to right,
-		rgba(7, 104, 172, 1) 0%,
-		rgba(5, 156, 146, 1) 60%,
-		rgba(7, 103, 172, 0.21) 100%
-	);
-	clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
-	z-index: 50;
-}
-
-.logo-bar .right {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 50px;
-	background: linear-gradient(
-		to left,
-		rgba(7, 103, 172, 0.341) 0%,
-		#03c180 100%
-	);
-	clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
-	transform: scaleX(-1);
-}
-
-.hero-section {
-	display: flex;
-	flex-direction: column;
-	padding-bottom: 25px;
-	margin: 0 auto;
-	width: fit-content;
-}
-
-.hero-section h2 {
-	color: var(--brand-secondary);
-	letter-spacing: -1px;
-	margin-bottom: -7px;
-}
-
-.hero-section p {
-	color: var(--body-text);
-}
-/* Logo Bar Section */
 /* Topics Section */
 
 .topics {
@@ -132,7 +10,7 @@ header .container .btn-container button {
 	background-color: var(--bg_default);
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 5px;
 	box-shadow: rgba(0, 0, 0, 0.15) 0 0rem 1rem;
 	border-radius: 10px;
 	width: 100%;
@@ -165,7 +43,7 @@ header .container .btn-container button {
 .topics .fields {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 5px;
 	font-size: 15px;
 	height: 100%;
 	width: 30%;
@@ -183,6 +61,12 @@ header .container .btn-container button {
 
 .topics .fields > div:last-of-type {
 	border-right: 0px !important;
+	padding-right: 10px;
+}
+
+.topics .fields label {
+	font-size: 14px;
+	margin-left: 3px;
 }
 
 .topics .fields select {
@@ -190,6 +74,7 @@ header .container .btn-container button {
 	color: var(--body-text);
 	background-color: var(--bg_default);
 	width: 100%;
+	font-size: 16px;
 }
 
 .topics .container .web-topics .topics-container {
@@ -207,6 +92,7 @@ header .container .btn-container button {
 	background-color: var(--bg_default);
 	width: 19.4%;
 	height: 300px;
+	word-break: break-all;
 }
 
 .topic .info {

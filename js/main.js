@@ -1,46 +1,5 @@
 import topics from './data/topics.js'
 
-const setTheme = isDark => {
-	const root = document.querySelector(':root')
-
-	const theme = {
-		'--bg_default': isDark ? '#1a1a1a' : '#fff',
-		'--bg_body': isDark ? '#282828' : '#f0f9ff',
-		'--lines-color': isDark ? '#000' : '#ddd',
-		'--body-text': isDark ? '#ededed' : '#333'
-	}
-
-	for (let v in theme) {
-		root.style.setProperty(v, theme[v])
-	}
-}
-
-const checkLocalStorage = () => {
-	let isDark = localStorage.getItem('isDark')
-		? JSON.parse(localStorage.getItem('isDark'))
-		: false
-
-	setTheme(isDark)
-}
-
-const switchTheme = function () {
-	return () => {
-		localStorage.setItem(
-			'isDark',
-			JSON.stringify(!JSON.parse(localStorage.getItem('isDark')))
-		)
-
-		let isDark = JSON.parse(localStorage.getItem('isDark'))
-		setTheme(isDark)
-	}
-}
-
-checkLocalStorage()
-
-let themeBtn = document.getElementById('theme-btn')
-let _switchTheme = switchTheme()
-themeBtn.addEventListener('click', _switchTheme)
-
 const topicsSection = document.querySelector('.web-topics')
 const topicsContainer = document.querySelector('.topics-container')
 
@@ -54,7 +13,7 @@ topics.forEach(topic => {
 	anchor.className = 'topic'
 
 	const img = document.createElement('img')
-	img.src = topic.img
+	img.src = `./images/${topic.imgFile}`
 	img.loading = 'lazy'
 
 	const info = document.createElement('div')
@@ -107,6 +66,8 @@ topics.forEach(topic => {
 
 	anchor.appendChild(img)
 	anchor.appendChild(info)
+
+	anchor.href = `pages/details.html?id=${topic.id}`
 
 	topicsContainer.appendChild(anchor)
 })
