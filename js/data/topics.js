@@ -4,7 +4,7 @@ export default [
 		title: 'Web Development Languages',
 		tool: 'HTML',
 		author: 'Sarah Smith',
-		img: './images/html.png',
+		imgFile: 'html.png',
 		rating: 4
 	},
 	{
@@ -12,7 +12,7 @@ export default [
 		title: 'Web Development Languages',
 		tool: 'CSS',
 		author: 'David Lee',
-		img: './images/css.webp',
+		imgFile: 'css.webp',
 		rating: 3.6
 	},
 	{
@@ -20,7 +20,7 @@ export default [
 		title: 'Web Development Languages',
 		tool: 'JavaScript',
 		author: 'Emily Chen',
-		img: './images/javascript.jpg',
+		imgFile: 'javascript.jpg',
 		rating: 4
 	},
 	{
@@ -28,7 +28,7 @@ export default [
 		title: 'Frontend Frameworks and Libraries',
 		tool: 'jQuery',
 		author: 'John Johnson',
-		img: './images/jquery.png',
+		imgFile: 'jquery.png',
 		rating: 4
 	},
 	{
@@ -36,7 +36,7 @@ export default [
 		title: 'Frontend Frameworks and Libraries',
 		tool: 'Angular',
 		author: 'Jessica Davis',
-		img: './images/angular.png',
+		imgFile: 'angular.png',
 		rating: 3.7
 	},
 	{
@@ -44,7 +44,7 @@ export default [
 		title: 'Frontend Frameworks and Libraries',
 		tool: 'React',
 		author: 'Daniel Brown',
-		img: './images/react.webp',
+		imgFile: 'react.webp',
 		rating: 4
 	},
 	{
@@ -52,7 +52,7 @@ export default [
 		title: 'Frontend Frameworks and Libraries',
 		tool: 'Vue.js',
 		author: 'Ava Jones',
-		img: './images/vuejs.jpeg',
+		imgFile: 'vuejs.jpeg',
 		rating: 3.6
 	},
 	{
@@ -60,7 +60,7 @@ export default [
 		title: 'Backend Frameworks and Libraries',
 		tool: 'Node.js',
 		author: 'Michael Kim',
-		img: './images/nodejs.webp',
+		imgFile: 'nodejs.webp',
 		rating: 4
 	},
 	{
@@ -68,7 +68,7 @@ export default [
 		title: 'Backend Frameworks and Libraries',
 		tool: 'Express.js',
 		author: 'Sophia Rodriguez',
-		img: './images/expressjs.webp',
+		imgFile: 'expressjs.webp',
 		rating: 4
 	},
 	{
@@ -76,7 +76,7 @@ export default [
 		title: 'Backend Frameworks and Libraries',
 		tool: 'Ruby on Rails',
 		author: 'William Lee',
-		img: './images/ruby.jpeg',
+		imgFile: 'ruby.jpeg',
 		rating: 3
 	},
 	{
@@ -84,7 +84,7 @@ export default [
 		title: 'Backend Frameworks and Libraries',
 		tool: 'Django',
 		author: 'Olivia Martinez',
-		img: './images/django.jpeg',
+		imgFile: 'django.jpeg',
 		rating: 4
 	},
 	{
@@ -92,7 +92,7 @@ export default [
 		title: 'Backend Frameworks and Libraries',
 		tool: 'Flask',
 		author: 'Ethan Thompson',
-		img: './images/flask.webp',
+		imgFile: 'flask.webp',
 		rating: 3
 	},
 	{
@@ -100,7 +100,7 @@ export default [
 		title: 'Database and APIs',
 		tool: 'SQL',
 		author: 'Madison Davis',
-		img: './images/sql.png',
+		imgFile: 'sql.png',
 		rating: 4.2
 	},
 	{
@@ -108,7 +108,7 @@ export default [
 		title: 'Database and APIs',
 		tool: 'NoSQL',
 		author: 'Isabella Wilson',
-		img: './images/nosql.png',
+		imgFile: 'nosql.png',
 		rating: 4.2
 	},
 	{
@@ -116,7 +116,7 @@ export default [
 		title: 'Database and APIs',
 		tool: 'REST APIs',
 		author: 'Jacob Garcia',
-		img: './images/restapi.jpeg',
+		imgFile: 'restapi.jpeg',
 		rating: 3
 	},
 	{
@@ -124,7 +124,7 @@ export default [
 		title: 'Database and APIs',
 		tool: 'GraphQL',
 		author: 'Mia Brown',
-		img: './images/graphql.png',
+		imgFile: 'graphql.png',
 		rating: 4
 	},
 	{
@@ -132,7 +132,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'OAuth',
 		author: 'Evelyn Nugyen',
-		img: './images/oauth.png',
+		imgFile: 'oauth.png',
 		rating: 3.5
 	},
 	{
@@ -140,7 +140,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'JSON',
 		author: 'Liam Hernandez',
-		img: './images/json.png',
+		imgFile: 'json.png',
 		rating: 3.5
 	},
 	{
@@ -148,7 +148,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'AJAX',
 		author: 'Avery Perez',
-		img: './images/ajax.gif',
+		imgFile: 'ajax.gif',
 		rating: 3
 	},
 	{
@@ -156,7 +156,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Websockets',
 		author: 'Victoria Kim',
-		img: './images/websockets.png',
+		imgFile: 'websockets.png',
 		rating: 4
 	},
 	{
@@ -164,7 +164,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Responsive Design',
 		author: 'Ryan Jones',
-		img: './images/responsive.gif',
+		imgFile: 'responsive.gif',
 		rating: 4
 	},
 	{
@@ -172,7 +172,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Accessibility',
 		author: 'Samantha Martin',
-		img: './images/accessibility.png',
+		imgFile: 'accessibility.png',
 		rating: 4
 	},
 	{
@@ -180,7 +180,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'User Experience (UX)',
 		author: 'Luke Davis',
-		img: './images/ux.jpeg',
+		imgFile: 'ux.jpeg',
 		rating: 4
 	},
 	{
@@ -188,7 +188,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'User Interface (UI)',
 		author: 'Grace Wilson',
-		img: './images/ui.png',
+		imgFile: 'ui.png',
 		rating: 3
 	},
 	{
@@ -196,7 +196,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Design Systems',
 		author: 'Noah Martinez',
-		img: './images/design-systems.jpeg',
+		imgFile: 'design-systems.jpeg',
 		rating: 4
 	},
 	{
@@ -204,7 +204,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Performance Optimization',
 		author: 'Chole Taylor',
-		img: './images/performance.png',
+		imgFile: 'performance.png',
 		rating: 3.1
 	},
 	{
@@ -212,7 +212,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Cross-Browser Compatibility',
 		author: 'Chole Taylor',
-		img: './images/performance.png',
+		imgFile: 'performance.png',
 		rating: 4.2
 	},
 	{
@@ -220,7 +220,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Search Engine Optimization (SEO)',
 		author: 'Emily Kim',
-		img: './images/seo.jpeg',
+		imgFile: 'seo.jpeg',
 		rating: 4
 	},
 	{
@@ -228,7 +228,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Web Security',
 		author: 'Gabriel Hernardez',
-		img: './images/web-security.jpeg',
+		imgFile: 'web-security.jpeg',
 		rating: 3.9
 	},
 	{
@@ -236,7 +236,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Testing and Debugging',
 		author: 'Avery Perez',
-		img: './images/testing.jpeg',
+		imgFile: 'testing.jpeg',
 		rating: 4.2
 	},
 	{
@@ -244,7 +244,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Continuous Integration/Development',
 		author: 'Madison Davis',
-		img: './images/ci-cd.jpeg',
+		imgFile: 'ci-cd.jpeg',
 		rating: 4
 	},
 	{
@@ -252,7 +252,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'DevOps',
 		author: 'Isabella Wilson',
-		img: './images/devops.png',
+		imgFile: 'devops.png',
 		rating: 4.1
 	},
 	{
@@ -260,7 +260,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Cloud Computing',
 		author: 'Jacob Garcia',
-		img: './images/cloud.jpeg',
+		imgFile: 'cloud.jpeg',
 		rating: 4.2
 	},
 	{
@@ -268,7 +268,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Docker',
 		author: 'Mia Brown',
-		img: './images/docker.png',
+		imgFile: 'docker.png',
 		rating: 4
 	},
 	{
@@ -276,7 +276,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Microservices',
 		author: 'Evelyn Nugyen',
-		img: './images/microservices.png',
+		imgFile: 'microservices.png',
 		rating: 3.9
 	},
 	{
@@ -284,7 +284,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Progressive Web Apps (PWA)',
 		author: 'Liam Hernandez',
-		img: './images/pwa.png',
+		imgFile: 'pwa.png',
 		rating: 3
 	},
 	{
@@ -292,7 +292,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Web Accessiblity Initiative (WAI)',
 		author: 'Avery Perez',
-		img: './images/wai.jpeg',
+		imgFile: 'wai.jpeg',
 		rating: 3.8
 	},
 	{
@@ -300,7 +300,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Content Managment System (CMS)',
 		author: 'Victoria Kim',
-		img: './images/cms.png',
+		imgFile: 'cms.png',
 		rating: 4
 	},
 	{
@@ -308,7 +308,7 @@ export default [
 		title: 'Web Development Concepts and Tools',
 		tool: 'Web Analytics',
 		author: 'Ryan Jones',
-		img: './images/analytics.png',
+		imgFile: 'analytics.png',
 		rating: 4
 	}
 ]
