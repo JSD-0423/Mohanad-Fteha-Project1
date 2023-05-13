@@ -77,6 +77,8 @@ const displayTopics = topics => {
 	})
 }
 
+window.addEventListener('load', displayTopics(topics))
+
 const searchInput = document.querySelector('input[type=text]')
 
 searchInput.addEventListener('input', e => {
