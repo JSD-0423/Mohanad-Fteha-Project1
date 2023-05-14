@@ -1,6 +1,3 @@
-body {
-	background-color: var(--bg_body);
-}
 * {
 	margin: 0;
 	padding: 0;
@@ -11,6 +8,7 @@ body {
 .container {
 	width: 95%;
 	margin: 0 auto;
+	padding: 2px 15px;
 }
 
 button {
@@ -23,17 +21,23 @@ button {
 	color: #959594;
 }
 
-a {
-	text-decoration: none;
-	color: unset;
-}
-
 .brand-primary {
 	color: var(--brand-primary);
 }
 
 .brand-secondary {
 	color: var(--brand-secondary);
+}
+
+.star {
+	color: #e4961f;
+}
+
+.stars-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	font-size: 19px;
 }
 
 /* Header Section */
@@ -144,6 +148,12 @@ footer {
 
 .heart {
 	color: var(--heart-color);
+}
+
+@media (max-width: 565px) {
+	.btn-container button > span {
+		display: none;
+	}
 }
 
 /* Footer Section */

@@ -47,15 +47,15 @@ const displayTopics = topics => {
 		let noNotFilledStars = 5 - Math.ceil(topic.rating)
 
 		for (var i = topic.rating; i >= 1; i--) {
-			starsCotainer.innerHTML += `<ion-icon name="star"></ion-icon>`
+			starsCotainer.innerHTML += `<ion-icon name="star" class="star"></ion-icon>`
 		}
 
 		if (i > 0) {
-			starsCotainer.innerHTML += `<ion-icon name="star-half"></ion-icon>`
+			starsCotainer.innerHTML += `<ion-icon name="star-half" class="star"></ion-icon>`
 		}
 
 		for (let i = 0; i < noNotFilledStars; i++) {
-			starsCotainer.innerHTML += `<ion-icon name="star-outline"></ion-icon>`
+			starsCotainer.innerHTML += `<ion-icon name="star-outline" class="star"></ion-icon>`
 		}
 
 		const author = document.createElement('p')

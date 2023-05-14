@@ -1,5 +1,10 @@
 /* Topics Section */
 
+a {
+	text-decoration: none;
+	color: unset;
+}
+
 .topics {
 	background-color: var(--bg_body);
 	padding-top: 25px;
@@ -101,14 +106,6 @@
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 5px 15px;
-}
-
-.topic .info .stars-container {
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
-	color: #e4961f;
-	font-size: 19px;
 }
 
 .topics-container img {
