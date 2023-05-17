@@ -170,3 +170,8 @@ a {
 		width: 100%;
 	}
 }
+
+.favorites-topics a {
+	color: unset;
+	text-decoration: none;
+}

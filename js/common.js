@@ -38,3 +38,11 @@ let _switchTheme = switchTheme()
 themeBtn.addEventListener('click', function () {
 	_switchTheme()
 })
+
+const favBtn = document.getElementById('fav-btn')
+
+favBtn.addEventListener('click', () => {
+	const favSec = document.querySelector('.favorites')
+
+	favSec.classList.toggle('show')
+})

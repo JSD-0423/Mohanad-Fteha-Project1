@@ -5,6 +5,10 @@
 	font-family: 'Nunito Sans', sans-serif;
 }
 
+body {
+	background-color: var(--bg_body);
+}
+
 .container {
 	width: 95%;
 	margin: 0 auto;
@@ -157,3 +161,45 @@ footer {
 }
 
 /* Footer Section */
+
+/* Favorites Section */
+.favorites {
+	background-color: var(--bg_default);
+	color: var(--body-text);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	z-index: 5555;
+	padding: 10px 0;
+	display: none;
+}
+
+.favorites h1 {
+	padding-bottom: 10px;
+}
+
+.favorites .favorites-topics {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.favorites .favorites-topics .fav-topic {
+	width: 150px;
+	word-break: break-all;
+}
+
+.favorites .favorites-topics .fav-topic img {
+	width: 100%;
+	height: 45%;
+	object-fit: cover;
+	text-align: center;
+}
+
+.show {
+	display: block;
+}
+
+/* Favorites Section */
