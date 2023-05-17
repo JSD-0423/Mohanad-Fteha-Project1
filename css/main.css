@@ -1,5 +1,9 @@
 /* Topics Section */
 
+.welcome-sec .container {
+	width: 100%;
+}
+
 a {
 	text-decoration: none;
 	color: unset;
@@ -82,6 +86,49 @@ a {
 	font-size: 16px;
 }
 
+@media (max-width: 1000px) {
+	.search-bar {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		height: fit-content !important;
+		gap: 0 !important;
+		border-radius: 7px !important;
+		overflow: hidden !important;
+	}
+
+	.search-bar * {
+		border-radius: 0 !important;
+	}
+
+	.search-bar .search-input {
+		border-right: 0 !important;
+		border-bottom: 1px solid var(--lines-color);
+		width: 100% !important;
+		height: 50px !important;
+	}
+
+	.search-input input {
+		width: 100%;
+	}
+
+	.search-bar .fields {
+		width: 100%;
+	}
+
+	.search-bar .fields div {
+		width: 100%;
+	}
+
+	.search-bar .fields div:first-of-type {
+		padding: 5px;
+	}
+
+	.search-bar .search-input {
+		width: 100%;
+	}
+}
+
 .topics .container .web-topics .topics-container {
 	display: flex;
 	align-items: center;
@@ -98,6 +145,34 @@ a {
 	width: 19.4%;
 	height: 300px;
 	word-break: break-all;
+}
+
+@media (max-width: 1435px) {
+	.topic {
+		width: 24.4% !important;
+	}
+}
+
+@media (max-width: 1347px) {
+	.topic {
+		width: 32.6% !important;
+	}
+}
+
+@media (max-width: 988px) {
+	.topic {
+		width: 49.4% !important;
+	}
+}
+
+@media (max-width: 906px) {
+	.topic {
+		width: 100% !important;
+	}
+
+	.welcome-sec .container {
+		width: 95%;
+	}
 }
 
 .topic .info {
